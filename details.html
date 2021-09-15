@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta -->
+  <title>YOU | Plugin Details</title>
+  <meta name="language" content="English">
+  <!-- Local -->
+  <link href="style.css" rel="stylesheet">
+  <!-- External -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <script>
+    // SpigotMC resource ID
+	pid = 91015
+	
+	/* ADVANCED:
+    Use URL tags to define plugin rather than a file for every plugin
+	e.g. https://example.com/details?plugin-name
+	
+	  let params = (new URL(document.location)).searchParams;
+      var searchParams = new URLSearchParams(params);
+	  
+      if (searchParams.has("plugin-name") === true) {
+        pid = 12345;
+      }
+      else {
+        window.location.href = "invalid-id-page";
+      }
+	  
+	*/
+  </script>	
+</head>
+
+<body>
+    <main id="main">
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 id="plugin_title">Loading...</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="plugin-details" class="plugin-details">
+      <div id="handlebar-section"><script id="handelbar-script" type="text/x-handlebars-template">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="plugin-info">
+              <h3>Plugin description</h3>
+              <div id="description">Retrieving from SpigotMC</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="plugin-info">
+			  <!--====-- Side bar --====-->
+              <h3>Plugin information</h3>
+              <img src="logos/{{pid}}.png" style="width:150px;height:150px;">
+              <ul>
+				<!-- Plugin name -->
+			    <li><strong>Name</strong>: <div id="name">Loading...</div></li>
+				<!-- Latest version -->
+			    <li><strong>Version</strong>: <div id="version">Loading...</div></li>
+				<!-- Total downloads -->
+                <li><strong>Downloads</strong>: <div id="downloads">Loading...</div></li>
+				<!-- Rating stars -->
+                <li>
+                    <strong>Rating</strong>:<br>
+					<a href="" id="aCount" style="color:#000">
+					  <span id="stars"></span>
+					  <span id="count"></span>
+					</a>
+				</li>
+				<!-- Release date -->
+                <li><strong>Release date</strong>: <div id="release">Loading...</div></li>
+				<!-- Last update date -->
+				<li><strong>Last Update</strong>: <div id="latest">Loading...</div></li>
+				<!-- Open the download menu -->
+				<li><span class="dl-latest" onclick="openDownload(), startTimer()">Download</span><a class="dl-button" style="margin-left:5px" id="source">Source Code</a></li>
+              </ul>
+            </div><br>
+ 
+			<!--====-- Download menu --====-->
+            <div id="download-section" class="overlay">
+			  <!-- Close menu if clicked away -->
+              <span class="overlay-content" onclick="closeDownload(), endTimer()">
+			    <!-- Download timer -->
+                <div class="timer" id="timer">
+                    <progress value="0" max="5" id="progressBar" style="width:475px"></progress>
+                </div>
+				<!--==-- Downloads --==-->
+                <div id="timerElement">
+                    <iframe src="download/{{pid}}.html" width="500px" height="500px" style="border:20px solid white;margin-left:auto; margin-right:auto; display:block;border-radius: 15px" id="downloadFrame"></iframe>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </script></div> 
+    </section>
+  </main>
+  
+  <!-- Scripts -->	
+  <script src="scripts.js"></script>
+</body>
+</html>
