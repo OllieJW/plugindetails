@@ -24,7 +24,9 @@ function timeConverter(UNIX_timestamp){
 (function(window, document, $, undefined) {
   'use strict'; var data,source,template;
   data = {
-	pid: pid
+	pid: pid,
+    pid2: pid2,
+	timer: timer
   };
   source = $("#handelbar-script").html();
 	template = Handlebars.compile(source);
@@ -53,25 +55,25 @@ function closeDownload() {
   document.getElementById("download-section").style.width = "0%";
 }
 //========= Timer =========\\
-var timeleft = 5;
+var timeleft = timer;
 document.getElementById("timerElement").style.filter = "blur(3px)"
 document.getElementById("downloadFrame").style.pointerEvents = "none"
 var downloadTimer
 function startTimer() {
 	downloadTimer = setInterval(function(){
-	  if(timeleft < 0){
+	  if(timeleft <= 0){
 		document.getElementById("timerElement").style.filter = "blur(0px)"
 		document.getElementById("downloadFrame").style.pointerEvents = "auto"
 		document.getElementById("timer").style.display = "none"
 		clearInterval(downloadTimer);
 	  }
-	  document.getElementById("progressBar").value = 5 - timeleft;
+	  document.getElementById("progressBar").value = timer - timeleft;
 	  timeleft -= 0.01;
-	}, 5);
+	}, timer);
 	return;
 }    
 function endTimer() {
-	timeleft = 5;
+	timeleft = timer;
 	clearInterval(downloadTimer);
 	document.getElementById("progressBar").value = 0;
 }

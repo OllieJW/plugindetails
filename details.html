@@ -14,25 +14,31 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <script>
-    // SpigotMC resource ID
-	pid = 91015
+    // SpigotMC resource ID	
+    let params = (new URL(document.location)).searchParams;
+    var searchParams = new URLSearchParams(params);
+  
+	// Advanced: If the search has "?plugin-name" it will set the ID to 12345 if not it will send you to the error page
 	
-	/* ADVANCED:
-    Use URL tags to define plugin rather than a file for every plugin
-	e.g. https://example.com/details?plugin-name
-	
-	  let params = (new URL(document.location)).searchParams;
-      var searchParams = new URLSearchParams(params);
-	  
-      if (searchParams.has("plugin-name") === true) {
-        pid = 12345;
-      }
-      else {
-        window.location.href = "invalid-id-page";
-      }
-	  
+	/*
+	if (searchParams.has("plugin-name") === true) {
+	  pid = 12345;
+	}
+	else {
+	  window.location.href = "assets/invalid.html";
+	}
 	*/
-  </script>	
+	
+	// Basic:
+	pid = searchParams.toString().replace("=", "");
+	
+	// First 2 digits of the plugin's ID used for the image
+	pid2t = (pid)/1000;
+    pid2 = pid2t >> 0;
+
+    // Download timer seconds (0 to disable) 
+	timer = 2;
+  </script>
 </head>
 
 <body>
@@ -59,7 +65,7 @@
             <div class="plugin-info">
 			  <!--====-- Side bar --====-->
               <h3>Plugin information</h3>
-              <img src="logos/{{pid}}.png" style="width:150px;height:150px;">
+              <img src="https://www.spigotmc.org/data/resource_icons/{{pid2}}/{{pid}}.jpg?1631726048" style="width:150px;height:150px;">
               <ul>
 				<!-- Plugin name -->
 			    <li><strong>Name</strong>: <div id="name">Loading...</div></li>
@@ -90,7 +96,7 @@
               <span class="overlay-content" onclick="closeDownload(), endTimer()">
 			    <!-- Download timer -->
                 <div class="timer" id="timer">
-                    <progress value="0" max="5" id="progressBar" style="width:475px"></progress>
+                    <progress value="0" max="{{timer}}" id="progressBar" style="width:475px"></progress>
                 </div>
 				<!--==-- Downloads --==-->
                 <div id="timerElement">
