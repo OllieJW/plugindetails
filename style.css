@@ -148,6 +148,943 @@
     text-overflow:ellipsis;
     overflow:hidden
 }
+.hasJs .bbCodeSpoilerText{
+    display:none;
+    background-color:#fff;
+    padding:5px;
+    margin-top:5px;
+    margin-right:;
+    margin-bottom:5px;
+    border:1px solid #d9d9d9;
+    overflow:auto
+}
+.hasJs .bbCodeSpoilerText .bbCodeSpoilerText,.hasJs .bbCodeSpoilerText .bbCodeBlock,.hasJs .messageList.withSidebar .bbCodeSpoilerText{
+    margin-right:0
+}
+.NoJs .bbCodeSpoilerContainer{
+    background-color:#2c2c2c;
+    background-color:currentColor
+}
+.NoJs .bbCodeSpoilerContainer>.bbCodeSpoilerText{
+    visibility:hidden
+}
+.NoJs .bbCodeSpoilerContainer:hover{
+    background-color:transparent
+}
+.NoJs .bbCodeSpoilerContainer:hover>.bbCodeSpoilerText{
+    visibility:visible
+}
+@media(max-width:800px){
+    .Responsive .bbCodeBlock,.Responsive.hasJs .bbCodeSpoilerText{
+        margin-right:0
+    }
+}
+.bbCodePHP ol,.bbCodeHtml ol,.bbCodeCode ol{
+    color:lightgrey;
+    -moz-user-select:-moz-none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+.bbCodePHP li>div,.bbCodeHtml li>div,.bbCodeCode li>div{
+    color:grey;
+    -moz-user-select:text;
+    -khtml-user-select:text;
+    -webkit-user-select:text;
+    -ms-user-select:text;
+    user-select:text
+}
+.message .dark_postrating.likesSummary,.dark_postrating{
+    margin-top:10px;
+    padding-bottom:2px;
+    min-height:19px
+}
+.messageSimple .dark_postrating{
+    background:0 0;
+    border-bottom:none;
+    margin-top:6px!important
+}
+.dark_postrating_table{
+    border-spacing:5px;
+    border-collapse:separate
+}
+.dark_postrating_detail{
+    background:#fff;
+    font-family:trebuchet ms,Helvetica,Arial,sans-serif;
+    color:#7f7f7f;
+    font-size:11px;
+    padding:4px!important
+}
+.dark_postrating_column{
+    vertical-align:top;
+    padding:0;
+    margin:3px;
+    width:155px;
+    border:1px solid #fafafa
+}
+.dark_postrating_column>div{
+    display:block;
+    max-height:105px;
+    overflow:auto;
+    padding:7px
+}
+.dark_postrating_delete{
+    display:block;
+    visibility:hidden;
+    float:left;
+    height:13px;
+    margin-right:3px;
+    width:12px;
+    color:#ff27e1;
+    background:url(styles/dark/cross_small.png) center no-repeat
+}
+.dark_postrating_column:hover .dark_postrating_moderator{
+    visibility:visible!important
+}
+.dark_postrating_header strong{
+    font-weight:700;
+    color:#666
+}
+.dark_postrating_header img{
+    vertical-align:middle;
+    position:relative;
+    top:-2px
+}
+.dark_postrating_header{
+    font-size:14px;
+    margin-bottom:2px;
+    padding-bottom:3px;
+    border-bottom:1px dotted #fafafa
+}
+.dark_postrating_column a.username{
+    display:block
+}
+.dark_postrating_member{
+    border-spacing:0;
+    border-collapse:separate;
+    border-width:0 1px 0;
+    border-style:solid;
+    border-color:#fafafa;
+    color:#2c2c2c;
+    width:100%;
+    padding:5px 25px
+}
+.dark_postrating_member td,.dark_postrating_member th{
+    padding:2px 4px 1px;
+    text-align:center
+}
+.dark_postrating_member td{
+    border-width:1px 0 0 0;
+    border-style:solid;
+    border-color:#fafafa
+}
+.dark_postrating_member tr:nth-child(2) td{
+    border-width:0
+}
+.dark_postrating_member th{
+    color:#7f7f7f;
+    font-size:11px
+}
+.dark_postrating_member img{
+    vertical-align:text-top
+}
+.dark_postrating_positive{
+    color:#62a201
+}
+.dark_postrating_negative{
+    color:#d90b00
+}
+.dark_postrating_bar{
+    width:80px;
+    height:10px;
+    background:0 0;
+    border:1px solid #ddd;
+    border-radius:2px;
+    padding:1px;
+    font-size:0
+}
+.dark_postrating_bar_positive{
+    height:10px;
+    background:#62a201;
+    display:inline-block;
+    opacity:.4;
+    font-size:0
+}
+.dark_postrating_bar_neutral{
+    height:10px;
+    background:#bbb;
+    display:inline-block;
+    opacity:.4;
+    font-size:0
+}
+.dark_postrating_bar_negative{
+    height:10px;
+    background:#d90b00;
+    display:inline-block;
+    opacity:.4;
+    font-size:0
+}
+.dark_postrating_bar:hover>div{
+    opacity:1
+}
+.profilePage .infoBlock dd.dark_postrating_bar_dd:last-child{
+    margin-bottom:0
+}
+.dark_postrating_inputlist{
+    display:block;
+    cursor:default;
+    float:right;
+    opacity:1;
+    font-size:11px;
+    -ms-filter:'alpha(opacity=100)';
+    filter:alpha(opacity=100)
+}
+.dark_postrating_inputlist.dark_postrating_inputlist_undo li{
+    opacity:1;
+    -ms-filter:'alpha(opacity=100)';
+    filter:alpha(opacity=100)
+}
+.dark_postrating_inputlist li{
+    display:inline;
+    opacity:.5;
+    -ms-filter:'alpha(opacity=50)';
+    filter:alpha(opacity=50);
+    zoom:1
+}
+.dark_postrating_ie8 .dark_postrating_inputlist li{
+    display:inline-block
+}
+.dark_postrating_inputlist li:hover{
+    opacity:1;
+    -ms-filter:'alpha(opacity=100)';
+    filter:alpha(opacity=100)
+}
+li.dark_postrating_textonly{
+    vertical-align:top;
+    display:inline-block;
+    margin:1px 4px 0
+}
+.dark_postrating_outputlist{
+    display:block;
+    margin-left:3px;
+    float:left;
+    font-family:trebuchet ms,Helvetica,Arial,sans-serif;
+    color:#7f7f7f;
+    font-size:11px
+}
+.dark_postrating_outputlist li{
+    display:inline;
+    margin-right:6px
+}
+.dark_postrating_outputlist li strong,.dark_postrating_thread_rating strong{
+    font-weight:700;
+    color:#666
+}
+.dark_postrating_outputlist li img,.dark_postrating_thread_rating img{
+    vertical-align:text-top
+}
+.dark_postrating_thread_rating{
+    float:right;
+    font-family:trebuchet ms,Helvetica,Arial,sans-serif;
+    color:#7f7f7f;
+    font-size:11px;
+    margin-left:10px
+}
+.discussionListItem .iconKey span~.dark_postrating_thread_rating{
+    margin-right:10px
+}
+.dark_postrating_hide_post{
+    display:none
+}
+.message>.dark_postrating_hide_post{
+    display:block!important
+}
+.pairsJustified .dark_postrating_bar_dd{
+    width:100%
+}
+.pairsJustified .dark_postrating_bar_dd div{
+    margin:1px auto 5px
+}
+.pairsJustified .dark_postrating_bar_dd+dd{
+    float:left;
+    width:100%;
+    text-align:left
+}
+.message .messageMeta{
+    margin:0!important
+}
+@media(max-width:480px){
+    .dark_postrating_column{
+        display:block;
+        float:left
+    }
+}
+.likesSummary{
+    overflow:hidden;
+    zoom:1;
+    font-size:11px
+}
+.LikeText{
+    float:left
+}
+.likeInfo{
+    float:right
+}
+.messageSimpleList .messageSimple.InlineModChecked{
+    background-color:#ccf1fc
+}
+.messageSimpleList.topBorder{
+    border-top:1px #fafafa solid;
+    padding-bottom:5px
+}
+.messageSimple{
+    overflow:hidden;
+    zoom:1;
+    padding:0;
+    padding-bottom:10px;
+    margin:10px 0
+}
+.messageSimpleList.contained .messageSimple{
+    padding:10px;
+    margin:0
+}
+.messageSimple .avatar{
+    float:left;
+    font-size:0
+}
+.messageSimple .messageInfo{
+    margin-left:65px
+}
+.messageSimple .messageContent{
+    min-height:35px
+}
+.messageSimple .messageContent article,.messageSimple .messageContent blockquote{
+    display:inline
+}
+.messageSimple .poster{
+    font-weight:700
+}
+.messageSimple .messageMeta{
+    overflow:hidden;
+    zoom:1;
+    font-size:11px;
+    line-height:14px;
+    padding-top:5px
+}
+.messageSimple .privateControls{
+    float:left
+}
+.messageSimple .privateControls .item{
+    float:left;
+    margin-right:10px
+}
+.messageSimple .publicControls{
+    float:right
+}
+.messageSimple .publicControls .item{
+    float:left;
+    margin-left:10px
+}
+.messageNotices li{
+    font-size:12px;
+    background:#fff none;
+    padding:5px;
+    margin:8px 0;
+    border:1px solid #d9d9d9;
+    border-radius:3px;
+    line-height:16px
+}
+.messageNotices .icon{
+    float:right;
+    width:16px;
+    height:16px;
+    background:url(//static.spigotmc.org/styles/spigot/xenforo/xenforo-ui-sprite.png) no-repeat 1000px 1000px
+}
+.messageNotices .warningNotice .icon{
+    background-position:-48px -32px
+}
+.messageNotices .deletedNotice .icon{
+    background-position:-64px -32px
+}
+.messageNotices .moderatedNotice .icon{
+    background-position:-32px -16px
+}
+.messageSimpleList .messageSimple.placeholder{
+    border:none;
+    margin:10px 0;
+    padding:0
+}
+.messageSimpleList .placeholder .placeholderContent{
+    overflow:hidden;
+    zoom:1;
+    border:1px solid #fafafa;
+    background:#fff url(//static.spigotmc.org/styles/spigot/xenforo/gradients/category-23px-light.png) repeat-x top;
+    padding:5px;
+    border-radius:5px;
+    color:#c7c7c7;
+    font-size:11px
+}
+.messageSimpleList .placeholder a.avatar{
+    float:left;
+    margin-right:5px;
+    display:block
+}
+.messageSimpleList .placeholder a.avatar img{
+    width:24px;
+    height:24px;
+    display:block
+}
+.messageSimpleList .placeholder .privateControls{
+    margin-top:2px
+}
+.messageSimple .messageResponse{
+    margin-top:10px;
+    font-size:11px;
+    max-width:450px;
+    _width:450px
+}
+.messageSimple .comment,.messageSimple .secondaryContent{
+    overflow:hidden;
+    zoom:1;
+    margin-top:2px;
+    padding:5px
+}
+.messageSimple .comment .avatar img{
+    float:left;
+    width:32px;
+    height:32px
+}
+.messageSimple .comment .commentInfo,.messageSimple .comment .elements{
+    margin-left:42px
+}
+.messageSimple .comment .commentInfo .likesSummary{
+    background:0 0;
+    border:none;
+    padding:5px 0 0
+}
+.messageSimple .comment .commentContent{
+    min-height:19px
+}
+.messageSimple .comment.deleted .commentContent{
+    color:#c7c7c7;
+    font-size:11px
+}
+.messageSimple .commentContent article,.messageSimple .commentContent blockquote{
+    display:inline
+}
+.messageSimple .comment .commentControls{
+    margin-top:5px
+}
+.messageSimple .comment .commentControls .item{
+    margin-left:10px
+}
+.messageSimple .comment textarea{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    *width:96%;
+    max-height:100px;
+    resize:vertical
+}
+.messageSimple .comment .submit{
+    margin-top:5px;
+    text-align:right
+}
+@media(max-width:480px){
+    .Responsive .messageSimple>.avatar img{
+        width:32px;
+        height:32px
+    }
+    .Responsive .messageSimple .messageInfo{
+        margin-left:46px
+    }
+}
+#moderatorBar{
+    background-color:#2b2b2b;
+    border-bottom:1px solid #c7c7c7;
+    font-size:11px
+}
+#moderatorBar{
+    zoom:1
+}
+#moderatorBar:after{
+    content:'.';
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden
+}
+#moderatorBar .pageContent{
+    padding:2px 0;
+    overflow:auto
+}
+#moderatorBar a{
+    display:inline-block;
+    padding:2px 10px;
+    border-radius:3px
+}
+#moderatorBar a,#moderatorBar .itemCount{
+    color:#f0f0f0
+}
+#moderatorBar a:hover{
+    text-decoration:none;
+    background-color:#535353;
+    color:#fafafa
+}
+#moderatorBar .itemLabel,#moderatorBar .itemCount{
+    display:inline-block;
+    height:16px;
+    line-height:16px
+}
+#moderatorBar .itemCount{
+    background:#535353;
+    padding-left:6px;
+    padding-right:6px;
+    text-align:center;
+    font-weight:700;
+    border-radius:2px;
+    text-shadow:none
+}
+#moderatorBar .itemCount.alert{
+    background:#e03030;
+    color:#fff;
+    box-shadow:2px 2px 5px rgba(0,0,0,.25)
+}
+#moderatorBar .adminLink{
+    float:right
+}
+#moderatorBar .permissionTest,#moderatorBar .permissionTest:hover{
+    background:#e03030;
+    color:#fff;
+    box-shadow:2px 2px 5px rgba(0,0,0,.25);
+    font-weight:700
+}
+.natMenuLevel0{
+    padding-left:0
+}
+.natMenuLevel1{
+    padding-left:10px
+}
+.natMenuLevel2{
+    padding-left:20px
+}
+.natMenuLevel3{
+    padding-left:30px
+}
+.natMenuLevel4{
+    padding-left:40px
+}
+.natMenuLevel5{
+    padding-left:50px
+}
+.natMenuLevel6{
+    padding-left:60px
+}
+.natMenuLevel7{
+    padding-left:70px
+}
+.natMenuLevel8{
+    padding-left:80px
+}
+.natMenuLevel9{
+    padding-left:90px
+}
+.natMenuLevel10{
+    padding-left:100px
+}
+div.natJSMenuColumns{
+    background-color:#fff;
+    background-color:rgba(255,255,255,.96)
+}
+div.natJSMenuColumns ul{
+    float:left;
+    border-bottom:0;
+    background-color:transparent!important;
+    max-height:none!important
+}
+.rating{
+    line-height:18px
+}
+.rating .star{
+    width:18px;
+    height:18px;
+    display:inline-block;
+    border:none;
+    outline:none;
+    padding:0;
+    text-indent:9999em;
+    overflow:hidden;
+    white-space:nowrap;
+    vertical-align:text-bottom
+}
+.rating button.star{
+    cursor:pointer;
+    background-color:transparent
+}
+.rating .star.Full{
+    background-position:-90px -32px
+}
+.rating .star.Half,.rating .star.Full.Half{
+    background-position:-108px -32px
+}
+.rating .RatingValue{
+    display:none
+}
+.review .rating{
+    margin:0 5px
+}
+.review .rating,.review .rating dl,.review .rating dt,.review .rating dd{
+    display:inline
+}
+body .review .messageContent article,body .review .messageContent blockquote,body .review .commentContent article,body .review .commentContent blockquote{
+    display:block
+}
+.review .reviewResource{
+    margin-top:1px;
+    margin-bottom:2px;
+    font-size:11px;
+    color:#7f7f7f
+}
+.review .reviewDeletedNotice{
+    margin:5px 0;
+    color:#960000;
+    font-size:11px
+}
+.review.resourceReviewDeleted .messageContent .ugc{
+    display:none
+}
+.resourceUpdate{
+    border-bottom:none;
+    border-top:1px solid #fafafa;
+    padding:40px 0 0;
+    overflow:hidden;
+    zoom:1
+}
+.resourceUpdate:first-child{
+    border-top:none;
+    padding-top:0
+}
+.resourceUpdate .hidden{
+    display:none
+}
+.resourceUpdate .avatar{
+    display:none
+}
+.resourceUpdate .versionInfo{
+    float:right;
+    width:230px;
+    margin-top:0;
+    margin-left:10px;
+    font-size:11px
+}
+.resourceUpdate .versionInfo .secondaryContent{
+    padding:10px
+}
+.resourceUpdate .likesSummary{
+    color:#858585;
+    background-color:#fbfbfb;
+    padding:8px;
+    margin-top:8px;
+    border:1px solid #ccc;
+    border-radius:3px
+}
+.imageCollection{
+    margin:10px auto;
+    border:1px solid #fafafa;
+    border-radius:5px;
+    background:#fff url(//static.spigotmc.org/styles/spigot/xenforo/gradients/category-23px-light.png) repeat-x top;
+    padding:5px;
+    overflow:hidden;
+    zoom:1
+}
+.imageCollection .textHeading{
+    margin-top:0;
+    color:#d9d9d9
+}
+.imageCollection li{
+    float:left;
+    width:100px;
+    height:100px;
+    overflow:hidden;
+    background-color:#fff;
+    border:1px solid #fafafa;
+    border-radius:5px;
+    text-align:center;
+    line-height:100px;
+    font-size:1px;
+    margin:3px;
+    padding:5px;
+    white-space:nowrap
+}
+.imageCollection li img{
+    vertical-align:middle
+}
+.innerContent .bbCodeBlock{
+    margin-right:0
+}
+.innerContent .updates ol{
+    border-bottom:1px solid #f0f0f0;
+    margin-bottom:5px;
+    border-top:none;
+    border-left:none;
+    border-right:none
+}
+.innerContent .updates ol li{
+    margin:5px 0
+}
+.innerContent .updates ol li .postDate{
+    color:#7f7f7f;
+    font-size:11px
+}
+.innerContent .customResourceFields{
+}
+.innerContent .customResourceFields.aboveInfo{
+    border-bottom:1px solid #fafafa;
+    margin-bottom:10px
+}
+.innerContent .customResourceFields.belowInfo{
+    border-top:1px solid #fafafa;
+    margin-top:10px
+}
+.innerContent .customResourceFields dl{
+    overflow:hidden;
+    margin:8px 0
+}
+.innerContent .customResourceFields dt{
+    width:190px;
+    float:left;
+    color:#7f7f7f
+}
+.innerContent .customResourceFields dd{
+    margin-left:200px
+}
+.innerContent .customResourceFields .plainList{
+    margin-left:0;
+    list-style-type:none
+}
+.innerContent .customResourceFields .plainList>li{
+    list-style:none
+}
+.innerContent .rateBlock{
+    margin:10px auto;
+    border:1px solid #fafafa;
+    border-radius:5px;
+    background:#fff;
+    padding:5px;
+    text-align:center;
+    overflow:hidden;
+    zoom:1
+}
+.innerContent .rateBlock .rating{
+    display:inline-block;
+    text-align:left;
+    width:94px
+}
+.innerContent .rateBlock .Hint{
+    display:inline-block;
+    width:0;
+    white-space:nowrap;
+    word-wrap:normal
+}
+.moreLink{
+    font-weight:700;
+    text-align:right
+}
+.sidebar .rating .Hint{
+    display:block
+}
+.sidebar .resourceActions,.sidebar .resourceControls{
+    margin-top:1em;
+    line-height:1.5
+}
+.sidebar .featuredNotice{
+    font-size:11px;
+    color:#ccc;
+    background:#fbfbfb url(//static.spigotmc.org/styles/spigot/xenforo/gradients/form-button-white-25px.png) repeat-x top;
+    padding:1px 3px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    display:block;
+    float:right;
+    box-shadow:1px 1px 3px rgba(0,0,0,.25)
+}
+.sidebar .callToAction{
+    display:block;
+    text-align:center;
+    height:auto;
+    line-height:normal;
+    margin:15px 0
+}
+.sidebar .callToAction span{
+    font-size:12pt;
+    padding:3px 0
+}
+.sidebar small.minorText{
+    display:block;
+    font-size:11px;
+    font-weight:400
+}
+.resourceVersionDeleted td{
+    text-decoration:line-through
+}
+.resourceVersionModerated td{
+    color:#7f7f7f
+}
+@media(max-width:480px){
+    .Responsive .resourceHistory .rating,.Responsive .resourceHistory .downloads{
+        display:none
+    }
+    .Responsive .innerContent .rateBlock .Hint{
+        display:none
+    }
+    .Responsive .innerContent .customResourceFields dt{
+        width:auto;
+        float:none
+    }
+    .Responsive .innerContent .customResourceFields dd{
+        margin-left:0
+    }
+}
+.resourceInfo{
+    overflow:hidden;
+    zoom:1;
+    margin-bottom:10px
+}
+.resourceInfo .resourceImage{
+    float:left;
+    margin-right:12px;
+    margin-bottom:3px;
+    width:48px;
+    position:relative
+}
+.resourceInfo .resourceImage .resourceIcon{
+    background-color:#fff;
+    border-radius:3px;
+    background-position:0 0!important;
+    width:48px;
+    height:48px
+}
+.resourceInfo h1{
+    font-size:18pt;
+    overflow:hidden;
+    zoom:1
+}
+.resourceInfo .primaryLinks{
+    float:right;
+    margin-left:10px;
+    min-width:180px
+}
+.resourceInfo .primaryLinks.noButton{
+    min-width:0;
+    margin-top:5px
+}
+.resourceInfo .primaryLinks li{
+    text-align:center;
+    margin-bottom:5px
+}
+.resourceInfo .primaryLinks li:last-child{
+    margin-bottom:0
+}
+.resourceInfo small.minorText{
+    display:block;
+    font-size:11px;
+    font-weight:400
+}
+.downloadButton{
+    display:inline-block;
+    line-height:42px;
+    cursor:pointer;
+    height:42px;
+    margin:0;
+    line-height:normal;
+    height:auto
+}
+.downloadDisabled{
+    border-color:#7f7f7f
+}
+.downloadButton .inner{
+    font-size:13px;
+    font-family:droid sans,Arial,sans-serif;
+    color:#fff;
+    background-color:#3a6581;
+    padding:0 16px;
+    border-radius:6px;
+    display:block;
+    text-align:center;
+    font-weight:600;
+    padding:3px 10px
+}
+.downloadButton.purchase .inner{
+    padding:6px 10px
+}
+.downloadButton:hover .inner{
+    background-color:#ed8106
+}
+.downloadButton:active{
+    background-color:#2b2b2b
+}
+.downloadDisabled .inner,.downloadDisabled:hover .inner{
+    background-color:#7f7f7f;
+    color:#fff
+}
+.resourceAlerts{
+    border:1px solid #fafafa;
+    border-radius:5px;
+    font-size:11px;
+    margin:10px 0;
+    padding:5px;
+    line-height:16px;
+    background-image:url(//static.spigotmc.org/styles/spigot/xenforo/gradients/form-button-white-25px.png)
+}
+.resourceAlerts .icon{
+    float:right;
+    width:16px;
+    height:16px;
+    margin-left:5px;
+    background:url(//static.spigotmc.org/styles/spigot/xenforo/xenforo-ui-sprite.png) no-repeat -1000px -1000px
+}
+.resourceAlerts .deletedAlert .icon{
+    background-position:-64px -32px
+}
+.resourceAlerts .moderatedAlert .icon{
+    background-position:-32px -16px
+}
+@media(max-width:480px){
+    .Responsive .resourceInfo{
+        display:table;
+        table-layout:fixed;
+        width:100%;
+        box-sizing:border-box
+    }
+    .Responsive .resourceInfo .primaryLinks{
+        display:table-footer-group;
+        float:none;
+        padding-right:0;
+        border-right:none;
+        margin:0 auto;
+        margin-top:10px
+    }
+    .Responsive .resourceInfo .downloadButton{
+        display:inline-block
+    }
+}
+.resourceTabs{
+    position:relative
+}
+.resourceTabs .tabs{
+    padding-left:10px
+}
+.resourceTabs .extraLinks{
+    position:static;
+    text-align:right;
+    margin-bottom:3px;
+    font-size:11px
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
 
 .overlay {
   height: 100%;
@@ -180,145 +1117,24 @@
     margin-bottom: 10px;
 }
 
-.plugin-details {
-  padding-top: 40px;
-}
-
-.plugin-details .plugin-details-slider img {
-  display: block;
-  margin-right: auto;
-}
-
-.plugin-details .plugin-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.plugin-details .plugin-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #2487ce;
-}
-
-.plugin-details .plugin-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #2487ce;
-}
-
-.plugin-details .plugin-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(18, 66, 101, 0.08);
-}
-
-.plugin-details .plugin-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.plugin-details .plugin-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.plugin-details .plugin-info ul li + li {
-  margin-top: 10px;
-}
-
-.plugin-details .plugin-description {
-  padding-top: 30px;
-}
-
-.plugin-details .plugin-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.plugin-details .plugin-description p {
-  padding: 0;
-}
-
-.dl-latest {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 5px;
-  color: #fff;
-  background: #2790db;
-}
-
-.dl-latest:hover {
-  background: #2693e0;
-  color: #fff;
-}
-
-.dl-button {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 5px;
-  color: #fff;
-  background: #c2c2c2;
-}
-
-.dl-button:hover {
-  background: #d1d1d1;
-  color: #fff;
-}
-
-.donate-button {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 5px;
-  color: #fff;
-  background: #e07bca;
-}
-
-.donate-button:hover {
-  background: #bf6aad;
-  color: #fff;
-}
-
-.green-button {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin-top: 5px;
-  color: #fff;
-  background: #49d06c;
-}
-
-.green-button:hover {
-  background: #41b75f;
-  color: #fff;
-}
-
-.size-text {
-  font-weight: 200;
+.button {
+    font-style: normal;
+    font-size: 12px;
+    font-family: droid sans,Arial,sans-serif;
+    color: #535353;
+    background-color: #d9d9d9;
+    padding: 0 10px;
+    border-width: 0;
+    border-top-color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    outline: none;
+    line-height: 36px;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: inset 0 -2px 0 rgb(0 0 0 / 10%);
+    -webkit-appearance: none;
+    font-weight: 600;
+    height: 36px;
 }
