@@ -25,3 +25,6 @@ else {
 }
 ```
 If someone uses ?plugin-name, it will use the id 12345. Using words in your URL is much easier to use and remember for later on.
+
+If you need more help, come talk to me in Discord
+https://discord.gg/tFhTcQ6yMn
