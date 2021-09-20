@@ -8,14 +8,14 @@ Plugin Details uses an API called Spiget made by Inventivetalent to retrieve a p
 Plugin Details has two built in ways to get your details, a simple and a slightly more complicated way.<br>
 **Note:** `pid` is the plugins ID.
 
-#The easy version: 
+### The easy version: 
 ```html
 pid = searchParams.toString().replace("=", "");
 ```
 This just uses the ? extention at the end of your URL to get the corrisponding SpigotMC resource.<br>
 Example: https://example.com/details.html/12345 Spigot: https://spigotmc.org/resources/12345
 
-#The slightly more complicated version:
+### The slightly more complicated version:
 ```html
 if (searchParams.has("plugin-name") === true) {
   pid = 12345;
