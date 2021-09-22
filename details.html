@@ -18,26 +18,34 @@
     let params = (new URL(document.location)).searchParams;
     var searchParams = new URLSearchParams(params);
   
-	// Advanced: If the search has "?plugin-name" it will set the ID to 12345 if not it will send you to the error page
+	//===== Basic: =====//
+	pid = searchParams.toString().replace("=", "");
 	
+	// DELETE FROM HERE
+	if (pid == 0) {
+		alert("Define a SpigotMC resource ID using https://example.com/details.html?12345 \nSetting the ID as 91015 as an example, check your URL now to see what's changed.");
+		window.location.href = "?91015"
+	}	
+	// TO HERE. THIS IS JUST FOR BEGINNERS TO SHOW THEM WHAT TO EDIT
+  
+  
+	// If the search has "?plugin-name" it will set the ID to 12345 
+	// if not it will send you to the error page.
+	// (using the plugins name is easier to remember than the id)
 	/*
 	if (searchParams.has("plugin-name") === true) {
 	  pid = 12345;
 	}
 	else {
 	  window.location.href = "assets/invalid.html";
-	}
-	*/
-	
-	// Basic:
-	pid = searchParams.toString().replace("=", "");
+	}*/
 	
 	// First 2 digits of the plugin's ID used for the image
 	pid2t = (pid)/1000;
     pid2 = pid2t >> 0;
 
     // Download timer seconds (0 to disable) 
-	timer = 2;
+	timer = 0;
   </script>
 </head>
 
@@ -85,8 +93,8 @@
                 <li><strong>Release date</strong>: <div id="release">Loading...</div></li>
 				<!-- Last update date -->
 				<li><strong>Last Update</strong>: <div id="latest">Loading...</div></li>
-				<!-- Open the download menu -->
-				<li><span class="dl-latest" onclick="openDownload(), startTimer()">Download</span><a class="dl-button" style="margin-left:5px" id="source">Source Code</a></li>
+				<!-- Open the download menu. Source code is automatically taken from the plugin -->
+				<li><span class="dl-latest" style="cursor:pointer" onclick="openDownload(), startTimer()">Download</span><a class="dl-button" style="margin-left:5px;" id="source">Source Code</a></li>
               </ul>
             </div><br>
  
@@ -100,7 +108,7 @@
                 </div>
 				<!--==-- Downloads --==-->
                 <div id="timerElement">
-                    <iframe src="download/{{pid}}.html" width="500px" height="500px" style="border:20px solid white;margin-left:auto; margin-right:auto; display:block;border-radius: 15px" id="downloadFrame"></iframe>
+                    <iframe src="download/{{pid}}.html" width="90%" height="500px" style="border:1em solid white;margin-left:auto; margin-right:auto; margin-top:-3em; display:block;border-radius: 1em" id="downloadFrame"></iframe>
                 </div>
               </span>
             </div>
